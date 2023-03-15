@@ -103,6 +103,7 @@ function ListView() {
 
   return (
     <div>
+      <h1 className="main-title">Recipe Book</h1>
       {!editMode && !shoppingMode && (
         <RecipeForm handleFormSubmit={handleCreateRecipe} />
       )}

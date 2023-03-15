@@ -1,3 +1,10 @@
+:root{
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #1e3041;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -63,7 +70,7 @@ input[type="checkbox"]:checked {
   font-size: 3rem;
   font-weight: bold;
   margin: 0 0 2rem;
-  text-shadow: 0 -1px 1px #415c71;
+  text-align: center;
 }
 
 .new-recipe-form {
