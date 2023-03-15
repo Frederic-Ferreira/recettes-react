@@ -1,4 +1,4 @@
-function RecipeList({recipes, handleDelete}){
+function RecipeList({recipes, handleDelete, handleEdit}){
     return (
         <div className="recipe-book">
             {recipes.length ? (
@@ -7,7 +7,7 @@ function RecipeList({recipes, handleDelete}){
             <div className="recipe" key={recipe.id}>
                 <div className="recipe-title">{recipe.title}</div>
                 <div className="recipe-actions">
-                <button className="recipe-edit-button">Edit</button>
+                <button onClick={() => handleEdit(recipe.id)} className="recipe-edit-button">Edit</button>
                 <button onClick={() => handleDelete(recipe.id)} className="recipe-delete-button">Delete</button>
                 </div>
             </div>

@@ -1,11 +1,18 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ListView from "./views/ListView";
+import RecipeView from "./views/RecipeView";
 import './App.css'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <ListView />
+    element: <ListView />,
+    // children: [
+    //   {
+    //     path: '/:id',
+    //     element: RecipeView
+    //   }
+    // ]
   }
 ]);
 
