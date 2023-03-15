@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ListView from "./views/ListView";
-import RecipeView from "./views/RecipeView";
-import './App.css'
+// import RecipeView from "./views/RecipeView";
+import "./App.css";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     //     element: RecipeView
     //   }
     // ]
-  }
+  },
 ]);
 
 export function App() {
