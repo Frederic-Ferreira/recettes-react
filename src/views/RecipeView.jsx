@@ -45,10 +45,9 @@ function RecipeView({ recipe, handleSaveRecipe, handleAddShopping }) {
           id,
           title: value,
         };
-      }
-      return ingredient;
+      } else return ingredient;
     });
-    // Assigner nouveaux ingredient à la recipe du state
+    // Assigner les nouveaux ingredient à la recipe du state
     setEditRecipe({
       ...editRecipe,
       ingredients: newIngredients,

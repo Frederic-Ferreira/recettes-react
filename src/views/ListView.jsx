@@ -58,7 +58,11 @@ function ListView() {
       ...ingredient,
       done: false,
     }));
-    setShoppingList([...shoppingList, ...doneIngredients]);
+    // Filtrer les ingrédients en doublons, si find retourne un item devient false, si undefined devient true
+    const filteredIngredient = doneIngredients.filter(
+      (ingredient) => !shoppingList.find((item) => item.id === ingredient.id)
+    );
+    setShoppingList([...shoppingList, ...filteredIngredient]);
     setEditMode(false);
     setShoppingMode(true);
   };
@@ -68,8 +72,7 @@ function ListView() {
     const updatedShopList = shoppingList.map((ingredient) => {
       if (ingredient.id === id) {
         return { ...ingredient, done: !ingredient.done };
-      }
-      return ingredient;
+      } else return ingredient;
     });
     setShoppingList(updatedShopList);
   };
