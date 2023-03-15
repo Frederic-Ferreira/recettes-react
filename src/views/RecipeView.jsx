@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import uniqid from 'uniqid';
 import IngredientList from '../components/IngredientList';
 
-function RecipeView({ recipe, handleSaveRecipe }){
+function RecipeView({ recipe, handleSaveRecipe, handleAddShopping }){
 
     const [editRecipe, setEditRecipe] = useState(recipe)
     const [ingredient, setIngredient] = useState('')
@@ -76,7 +76,7 @@ function RecipeView({ recipe, handleSaveRecipe }){
         </ul>
         <div className="recipe-edit-actions">
           <button onClick={() => handleSaveRecipe(editRecipe)} className="recipe-edit-save-button">Save</button>
-          <button className="recipe-edit-cart-button">Add to shopping list</button>
+          <button onClick={() => handleAddShopping(editRecipe.ingredients)} className="recipe-edit-cart-button">Add to shopping list</button>
         </div>
       </div>
     )
