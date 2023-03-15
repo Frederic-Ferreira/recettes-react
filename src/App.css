@@ -18,6 +18,10 @@ body {
 margin: 0 auto;
 }
 
+.message-shop{
+  margin: 20px;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
